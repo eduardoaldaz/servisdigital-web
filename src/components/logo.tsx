@@ -23,6 +23,15 @@ export function LogoMark({ className }: { className?: string }) {
   );
 }
 
+/** Trademark sign, same treatment as FacServis: small, body font, muted, raised. */
+export function Tm({ className }: { className?: string }) {
+  return (
+    <sup className={cn('relative -top-[0.95em] ml-[0.06em] align-baseline font-sans text-[0.36em] font-semibold tracking-normal opacity-55', className)}>
+      ™
+    </sup>
+  );
+}
+
 /** Two-tone wordmark, the family pattern (Fac|Servis, Docus|AI). */
 export function Wordmark({ className, tone = 'auto' }: { className?: string; tone?: 'auto' | 'light' | 'dark' }) {
   const [a, b] = SITE.wordmark;
@@ -36,6 +45,7 @@ export function Wordmark({ className, tone = 'auto' }: { className?: string; ton
     >
       {a}
       <span className={tone === 'light' ? 'text-plano-claro' : tone === 'dark' ? 'text-plano' : 'text-acento'}>{b}</span>
+      <Tm />
     </span>
   );
 }
@@ -54,6 +64,7 @@ export function FacServisWordmark({ className, tone = 'light' }: { className?: s
   return (
     <span className={cn('font-display font-extrabold leading-none tracking-[-0.03em]', tone === 'light' ? 'text-white' : 'text-[var(--fs-tinta)]', className)}>
       Fac<span className="text-[var(--fs-ambar)]">Servis</span>
+      <Tm />
     </span>
   );
 }
@@ -62,6 +73,7 @@ export function DocusAIWordmark({ className, tone = 'light' }: { className?: str
   return (
     <span className={cn('font-display font-extrabold leading-none tracking-[-0.03em]', tone === 'light' ? 'text-white' : 'text-[var(--da-from)]', className)}>
       Docus<span className={tone === 'light' ? 'text-[var(--da-accent)]' : 'text-[var(--da-brand)]'}>AI</span>
+      <Tm />
     </span>
   );
 }
