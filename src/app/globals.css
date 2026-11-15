@@ -1,0 +1,262 @@
+@import "tailwindcss";
+
+/*
+ * Servis Digital: parent of FacServis (teal-black + amber) and DocusAI (violet).
+ * Same family grammar (Figtree + Bricolage, two-tone wordmark, dark/light bands), own color: "azul plano",
+ * the blue of a process blueprint. Committed strategy: navy bands carry the brand, cobalt is the one action color.
+ */
+:root {
+  --tinta: #0b1430;
+  --tinta-2: #111c42;
+  --tinta-3: #22306a;
+  --plano: #2347e8;
+  --plano-hover: #1a37c4;
+  --plano-claro: #aebfff;
+  --plano-suave: #eef1ff;
+
+  --papel: #f4f5f1;
+  --papel-2: #e4e6df;
+  --superficie: #ffffff;
+  --texto: #0b1430;
+  --texto-2: #424b66;
+  --texto-3: #636c84;
+
+  /* Family colors (shown only inside each product's own panel) */
+  --fs-tinta: #08191c;
+  --fs-tinta-2: #0e2a2e;
+  --fs-ambar: #ffb020;
+  --fs-papel: #f3f6f2;
+  --da-from: #150e38;
+  --da-to: #281a66;
+  --da-brand: #5b3df5;
+  --da-accent: #b9a6ff;
+
+  /* Section theme: light by default; .oscuro switches the roles. */
+  --fondo: var(--papel);
+  --primer: var(--texto);
+  --secundario: var(--texto-2);
+  --terciario: var(--texto-3);
+  --linea: var(--papel-2);
+  --acento: var(--plano);
+  --boton: var(--plano);
+  --boton-hover: var(--plano-hover);
+  --boton-texto: #fff;
+}
+
+.oscuro {
+  --fondo: var(--tinta);
+  --primer: #ffffff;
+  --secundario: #c3cbe4;
+  --terciario: #8f9abd;
+  --linea: rgb(255 255 255 / 0.11);
+  --acento: var(--plano-claro);
+  --boton: var(--plano-claro);
+  --boton-hover: #c9d4ff;
+  --boton-texto: var(--tinta);
+}
+
+@theme inline {
+  --color-tinta: var(--tinta);
+  --color-tinta-2: var(--tinta-2);
+  --color-tinta-3: var(--tinta-3);
+  --color-plano: var(--plano);
+  --color-plano-hover: var(--plano-hover);
+  --color-plano-claro: var(--plano-claro);
+  --color-plano-suave: var(--plano-suave);
+  --color-papel: var(--papel);
+  --color-papel-2: var(--papel-2);
+  --color-superficie: var(--superficie);
+  --color-texto: var(--texto);
+  --color-texto-2: var(--texto-2);
+  --color-texto-3: var(--texto-3);
+  --color-fondo: var(--fondo);
+  --color-primer: var(--primer);
+  --color-secundario: var(--secundario);
+  --color-terciario: var(--terciario);
+  --color-linea: var(--linea);
+  --color-acento: var(--acento);
+
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-bricolage), var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono-face), ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-padding-top: 88px;
+  background: var(--tinta);
+}
+
+body {
+  background: var(--papel);
+  color: var(--texto);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+::selection {
+  background: var(--plano-claro);
+  color: var(--tinta);
+}
+
+:focus-visible {
+  outline: 2px solid var(--acento);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+input,
+textarea,
+select {
+  caret-color: var(--plano);
+}
+
+a {
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in oklab, var(--tinta) 30%, transparent) transparent;
+}
+
+/* Blueprint paper: a fine measuring grid, only behind process diagrams. */
+.plano-grid {
+  background-image:
+    linear-gradient(rgb(174 191 255 / 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(174 191 255 / 0.07) 1px, transparent 1px),
+    linear-gradient(rgb(174 191 255 / 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(174 191 255 / 0.035) 1px, transparent 1px);
+  background-size:
+    96px 96px,
+    96px 96px,
+    24px 24px,
+    24px 24px;
+}
+
+/* Article body (blog) */
+.prosa {
+  color: var(--texto-2);
+  font-size: 17.5px;
+  line-height: 1.75;
+}
+.prosa > * + * {
+  margin-top: 1.15em;
+}
+.prosa h2 {
+  margin-top: 2.2em;
+  color: var(--texto);
+  font-family: var(--font-display);
+  font-size: 1.6em;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+.prosa h3 {
+  margin-top: 1.8em;
+  color: var(--texto);
+  font-family: var(--font-display);
+  font-size: 1.2em;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+.prosa h2 + *,
+.prosa h3 + * {
+  margin-top: 0.6em;
+}
+.prosa strong {
+  color: var(--texto);
+  font-weight: 650;
+}
+.prosa a {
+  color: var(--plano);
+  text-decoration: underline;
+}
+.prosa ul,
+.prosa ol {
+  padding-left: 1.3em;
+}
+.prosa ul {
+  list-style: disc;
+}
+.prosa ol {
+  list-style: decimal;
+}
+.prosa li + li {
+  margin-top: 0.4em;
+}
+.prosa li::marker {
+  color: var(--plano);
+}
+.prosa blockquote {
+  border-left: 1px solid var(--plano);
+  padding-left: 1.1em;
+  color: var(--texto);
+  font-family: var(--font-display);
+  font-size: 1.15em;
+  font-weight: 600;
+  line-height: 1.45;
+}
+.prosa table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.prosa th,
+.prosa td {
+  border-bottom: 1px solid var(--papel-2);
+  padding: 10px 12px 10px 0;
+  text-align: left;
+  vertical-align: top;
+}
+.prosa th {
+  color: var(--texto);
+  font-weight: 650;
+}
+.prosa code {
+  border-radius: 4px;
+  background: var(--plano-suave);
+  padding: 0.1em 0.35em;
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+}
+
+@keyframes sd-scan {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
