@@ -21,7 +21,7 @@ function ProductPanel({ p }: { p: Producto }) {
       className={cn('group relative flex flex-col overflow-hidden rounded-[22px] text-white', fs ? 'bg-[var(--fs-tinta)]' : '')}
       style={
         fs
-          ? { background: 'radial-gradient(90% 60% at 85% 0%, rgb(24 95 165 / 0.55), transparent 60%), var(--fs-tinta)' }
+          ? { background: 'radial-gradient(90% 60% at 85% 0%, rgb(61 123 255 / 0.30), transparent 60%), var(--fs-tinta)' }
           : { background: 'radial-gradient(110% 70% at 10% 0%, rgb(185 166 255 / 0.20), transparent 60%), linear-gradient(160deg, var(--da-to), var(--da-from) 75%)' }
       }
     >
@@ -52,7 +52,7 @@ function ProductPanel({ p }: { p: Producto }) {
           rel="noopener"
           className={cn(
             'inline-flex h-11 items-center gap-2 rounded-full px-5 text-[15px] font-semibold transition-colors',
-            fs ? 'bg-[var(--fs-ambar)] text-[var(--fs-tinta)] hover:bg-[#b5d3f5]' : 'bg-white text-[var(--da-from)] hover:bg-[#ece7ff]',
+            fs ? 'bg-[var(--fs-azul)] text-white hover:bg-[#6699ff]' : 'bg-white text-[var(--da-from)] hover:bg-[#ece7ff]',
           )}
         >
           Visitar {p.urlLabel}

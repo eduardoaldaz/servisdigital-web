@@ -6,8 +6,8 @@ Servis Digital is the parent brand of FacServis and DocusAI. The site shares the
 
 | | Servis Digital | FacServis | DocusAI |
 |---|---|---|---|
-| Dark band | `#08191c` petrol | `#0c2f57` navy | `#150e38` → `#281a66` violet |
-| Accent | `#ffb020` amber (fills), `#9a5a00` (text on light) | `#185fa5` steel blue / `#8fbcf0` on dark | `#5b3df5` / `#b9a6ff` on dark |
+| Dark band | `#08191c` petrol | `#0a1b33` navy | `#150e38` → `#281a66` violet |
+| Accent | `#ffb020` amber (fills), `#9a5a00` (text on light) | `#3d7bff` blue / `#6699ff` on dark | `#5b3df5` / `#b9a6ff` on dark |
 | Wordmark | Servis**Digital** | Fac**Servis** | Docus**AI** |
 
 Shared: Figtree (text), Bricolage Grotesque 800 (headlines, wordmarks), two-tone wordmark, alternating dark and light bands, pill buttons.
