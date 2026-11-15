@@ -5,22 +5,20 @@ import { CASOS, CIFRAS } from '@/content/pruebas';
 import { cn } from '@/lib/cn';
 import { ButtonLink, Container, H2, Pendiente, Section } from './ui';
 
-/** Closing band of every page: the one action. Cobalt field, the strongest color moment of the site. */
+/** Closing band of every page: the one action. Amber field, the strongest color moment of the site. */
 export function CtaBand({ titulo = '¿Qué proceso le quita más horas a tu equipo?', texto }: { titulo?: string; texto?: string }) {
   return (
-    <section className="oscuro relative overflow-hidden bg-plano text-white" aria-labelledby="cta-titulo">
+    <section className="relative overflow-hidden bg-plano-claro text-tinta" aria-labelledby="cta-titulo">
       <Container className="relative flex flex-col items-start gap-8 py-20 sm:py-24 lg:flex-row lg:items-end lg:justify-between">
         <div>
           <h2 id="cta-titulo" className="max-w-[18ch] font-display text-[clamp(34px,5vw,60px)] font-extrabold leading-[1.0] tracking-[-0.035em]">
             {titulo}
           </h2>
-          <p className="mt-5 max-w-[52ch] text-[18px] leading-relaxed text-white/85">
-            {texto ?? 'Cuéntanoslo en una reunión de 30 minutos. Te diremos si la IA puede ayudar, cómo lo haríamos y por dónde empezar. Sin compromiso.'}
-          </p>
+          <p className="mt-5 max-w-[46ch] text-[18px] leading-relaxed text-tinta/80">{texto ?? 'Cuéntanoslo en 30 minutos. Sin compromiso.'}</p>
         </div>
         <Link
           href="/contacto"
-          className="group inline-flex h-14 shrink-0 items-center gap-2.5 rounded-full bg-white px-8 text-[17px] font-semibold text-tinta transition-colors hover:bg-plano-suave"
+          className="group inline-flex h-14 shrink-0 items-center gap-2.5 rounded-full bg-tinta px-8 text-[17px] font-semibold text-white transition-colors hover:bg-tinta-3"
         >
           Agenda una reunión
           <ArrowRight className="size-5 transition-transform group-hover:translate-x-0.5" aria-hidden />

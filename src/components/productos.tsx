@@ -21,7 +21,7 @@ function ProductPanel({ p }: { p: Producto }) {
       className={cn('group relative flex flex-col overflow-hidden rounded-[22px] text-white', fs ? 'bg-[var(--fs-tinta)]' : '')}
       style={
         fs
-          ? { background: 'radial-gradient(90% 60% at 85% 0%, rgb(255 176 32 / 0.13), transparent 60%), var(--fs-tinta)' }
+          ? { background: 'radial-gradient(90% 60% at 85% 0%, rgb(24 95 165 / 0.55), transparent 60%), var(--fs-tinta)' }
           : { background: 'radial-gradient(110% 70% at 10% 0%, rgb(185 166 255 / 0.20), transparent 60%), linear-gradient(160deg, var(--da-to), var(--da-from) 75%)' }
       }
     >
@@ -34,19 +34,10 @@ function ProductPanel({ p }: { p: Producto }) {
       </div>
       <div className="px-7 pt-6 sm:px-9">
         <h3 className="font-display text-[26px] font-bold leading-[1.1] tracking-[-0.025em]">{p.titular}</h3>
-        <p className="mt-3 max-w-[52ch] text-[15.5px] leading-relaxed text-white/75">{p.texto}</p>
       </div>
 
       <div className="relative mx-7 mt-7 sm:mx-9">{fs ? <FacServisMock /> : <DocusAIMock />}</div>
 
-      <ul className="mt-7 flex flex-col gap-2.5 px-7 sm:px-9">
-        {p.puntos.map((t) => (
-          <li key={t} className="flex gap-2.5 text-[15px] text-white/85">
-            <Check className={cn('mt-1 size-4 shrink-0', fs ? 'text-[var(--fs-ambar)]' : 'text-[var(--da-accent)]')} aria-hidden />
-            {t}
-          </li>
-        ))}
-      </ul>
       <p className="mx-7 mt-6 flex gap-2.5 rounded-xl bg-white/[0.07] px-4 py-3 text-[14.5px] text-white/85 sm:mx-9">
         <Sparkles className={cn('mt-0.5 size-4 shrink-0', fs ? 'text-[var(--fs-ambar)]' : 'text-[var(--da-accent)]')} aria-hidden />
         <span>
@@ -61,7 +52,7 @@ function ProductPanel({ p }: { p: Producto }) {
           rel="noopener"
           className={cn(
             'inline-flex h-11 items-center gap-2 rounded-full px-5 text-[15px] font-semibold transition-colors',
-            fs ? 'bg-[var(--fs-ambar)] text-[var(--fs-tinta)] hover:bg-[#ffc94b]' : 'bg-white text-[var(--da-from)] hover:bg-[#ece7ff]',
+            fs ? 'bg-[var(--fs-ambar)] text-[var(--fs-tinta)] hover:bg-[#b5d3f5]' : 'bg-white text-[var(--da-from)] hover:bg-[#ece7ff]',
           )}
         >
           Visitar {p.urlLabel}

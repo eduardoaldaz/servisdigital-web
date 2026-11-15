@@ -7,7 +7,7 @@ import { cn } from '@/lib/cn';
 type Estado = { tipo: 'idle' } | { tipo: 'enviando' } | { tipo: 'ok' } | { tipo: 'error'; mensaje: string };
 
 const field =
-  'mt-1.5 block w-full rounded-xl border border-papel-2 bg-superficie px-4 text-[16px] text-texto transition-[border-color,box-shadow] placeholder:text-texto-3 hover:border-[#c9ccc3] focus:border-plano focus:shadow-[0_0_0_4px_rgb(35_71_232/0.14)] focus:outline-none';
+  'mt-1.5 block w-full rounded-xl border border-papel-2 bg-superficie px-4 text-[16px] text-texto transition-[border-color,box-shadow] placeholder:text-texto-3 hover:border-[#c9ccc3] focus:border-plano focus:shadow-[0_0_0_4px_rgb(255_176_32/0.28)] focus:outline-none';
 
 export function ContactForm() {
   const [estado, setEstado] = useState<Estado>({ tipo: 'idle' });
@@ -29,7 +29,7 @@ export function ContactForm() {
   if (estado.tipo === 'ok') {
     return (
       <div className="rounded-2xl bg-superficie p-8" role="status">
-        <span className="flex size-11 items-center justify-center rounded-full bg-plano text-white">
+        <span className="flex size-11 items-center justify-center rounded-full bg-plano-claro text-tinta">
           <Check className="size-5" aria-hidden />
         </span>
         <h3 className="mt-5 font-display text-[26px] font-bold tracking-[-0.02em] text-texto">Recibido. Te escribiremos para proponerte horarios.</h3>
@@ -89,7 +89,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={estado.tipo === 'enviando'}
-          className="group inline-flex h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-plano px-6 text-[16px] font-semibold text-white transition-colors hover:bg-plano-hover disabled:opacity-70"
+          className="group inline-flex h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-plano px-6 text-[16px] font-semibold text-white transition-colors hover:bg-[#ffc94b] disabled:opacity-70"
         >
           {estado.tipo === 'enviando' ? <Loader2 className="size-4 animate-spin" aria-hidden /> : null}
           {estado.tipo === 'enviando' ? 'Enviando…' : 'Enviar y pedir reunión'}

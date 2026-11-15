@@ -3,8 +3,7 @@ import { SITE } from '@/lib/site';
 import { cn } from '@/lib/cn';
 
 /**
- * Servis Digital mark: an "S" drawn as a process route between two nodes,
- * the start (blueprint blue) and the finished step (light). Same rounded-square family as DocusAI's mark.
+ * Servis Digital mark: an "S" drawn as a process route between two nodes, on the amber square. Same rounded-square family as DocusAI's mark.
  */
 export function LogoMark({ className }: { className?: string }) {
   const id = `sd-${useId().replace(/[:«»]/g, '')}`;
@@ -12,14 +11,14 @@ export function LogoMark({ className }: { className?: string }) {
     <svg viewBox="0 0 24 24" className={cn('size-7', className)} aria-hidden>
       <defs>
         <linearGradient id={id} x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#2f55ff" />
-          <stop offset="1" stopColor="#1a2fa8" />
+          <stop offset="0" stopColor="#ffc94b" />
+          <stop offset="1" stopColor="#f59e0b" />
         </linearGradient>
       </defs>
       <rect x="1" y="1" width="22" height="22" rx="6.5" fill={`url(#${id})`} />
-      <path d="M16.6 7.2H10a2.4 2.4 0 0 0 0 4.8h4a2.4 2.4 0 0 1 0 4.8H7.4" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" />
-      <circle cx="16.8" cy="7.2" r="1.7" fill="#aebfff" />
-      <circle cx="7.2" cy="16.8" r="1.7" fill="#fff" />
+      <path d="M16.6 7.2H10a2.4 2.4 0 0 0 0 4.8h4a2.4 2.4 0 0 1 0 4.8H7.4" fill="none" stroke="#08191c" strokeWidth="2" strokeLinecap="round" />
+      <circle cx="16.8" cy="7.2" r="1.7" fill="#08191c" />
+      <circle cx="7.2" cy="16.8" r="1.7" fill="#08191c" />
     </svg>
   );
 }

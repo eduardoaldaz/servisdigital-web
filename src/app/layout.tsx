@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   twitter: { card: 'summary_large_image' },
 };
 
-export const viewport: Viewport = { themeColor: '#0b1430' };
+export const viewport: Viewport = { themeColor: '#08191c' };
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -40,7 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         {/*
           THESIS: an AI-implementation company proves itself by redrawing a real process; refuses the glowing-orb "AI agency" hero and the stock-photo consultancy.
-          OWN-WORLD: blueprint navy bands with a measuring grid only under process drawings, warm paper bands, cobalt as the single action color, white linework; Bricolage 800 + Figtree, mono only for drawing annotations; FacServis teal/amber and DocusAI violet appear only inside their own product panels.
+          OWN-WORLD: petrol bands with a measuring grid only under process drawings, pale paper bands, amber as the single action color, white linework; Bricolage 800 + Figtree, mono only for drawing annotations; FacServis teal/amber and DocusAI violet appear only inside their own product panels.
           STORY: the visitor sees one of their own processes go from manual to AI-assisted, understands we map before we build, sees our own products in production, and books a meeting.
           FIRST VIEWPORT: navy band; left headline "Ponemos la IA a trabajar dentro de tu empresa" with cobalt-light emphasis, one paragraph, primary "Agenda una reunión" + secondary; right a live process blueprint toggling Hoy / Con IA.
           FORM: grounded candidate 1 (process blueprint / "plano de procesos"); concept seed unavailable (script printed nothing), direction chosen in-thread.

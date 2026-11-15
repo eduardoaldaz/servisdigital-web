@@ -72,14 +72,14 @@ export function ProcessBlueprint({ className }: { className?: string }) {
     <div
       ref={ref}
       className={cn(
-        'plano-grid relative overflow-hidden rounded-[18px] border border-white/12 bg-[#0e1a3d] text-white shadow-[0_40px_80px_-40px_rgb(0_0_0/0.7)]',
+        'plano-grid relative overflow-hidden rounded-[18px] border border-white/12 bg-[#0e2a2e] text-white shadow-[0_40px_80px_-40px_rgb(0_0_0/0.7)]',
         className,
       )}
       onPointerEnter={() => setAuto(false)}
     >
       {/* Title block of the drawing */}
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 px-5 py-3.5">
-        <div className="flex items-baseline gap-2 font-mono text-[11px] uppercase tracking-[0.08em] text-[#8f9abd]">
+        <div className="flex items-baseline gap-2 font-mono text-[11px] uppercase tracking-[0.08em] text-[#8fa39e]">
           <span>Proceso</span>
           <span className="text-white/35">/</span>
           <span className="text-white">{proceso.nombre}</span>
@@ -98,7 +98,7 @@ export function ProcessBlueprint({ className }: { className?: string }) {
               onClick={() => toggle(v)}
               className={cn(
                 'flex h-8 items-center gap-1.5 rounded-full px-3.5 transition-colors duration-300',
-                vista === v ? (v === 'conIa' ? 'bg-plano-claro text-tinta' : 'bg-white text-tinta') : 'text-[#c3cbe4] hover:text-white',
+                vista === v ? (v === 'conIa' ? 'bg-plano-claro text-tinta' : 'bg-white text-tinta') : 'text-[#c3d0cc] hover:text-white',
               )}
             >
               {v === 'conIa' && <Sparkles className="size-3.5" aria-hidden />}
@@ -112,7 +112,7 @@ export function ProcessBlueprint({ className }: { className?: string }) {
       <div className="relative px-5 pb-4 pt-5 sm:px-6">
         <div key={`scan-${run}`} aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
           {vista === 'conIa' && (
-            <div className="absolute inset-x-0 h-1/2 animate-[sd-scan_1.1s_cubic-bezier(0.16,1,0.3,1)_1] bg-gradient-to-b from-transparent via-[rgb(174_191_255/0.10)] to-transparent" />
+            <div className="absolute inset-x-0 h-1/2 animate-[sd-scan_1.1s_cubic-bezier(0.16,1,0.3,1)_1] bg-gradient-to-b from-transparent via-[rgb(255_176_32/0.10)] to-transparent" />
           )}
         </div>
         <ol key={`${proceso.id}-${vista}-${run}`} className="relative min-h-[318px]" aria-live="polite">
@@ -124,13 +124,13 @@ export function ProcessBlueprint({ className }: { className?: string }) {
 
       {/* Legend + measurement */}
       <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 border-t border-white/10 px-5 py-3.5 text-[13px]">
-        <p className="tnum text-[#c3cbe4]">
+        <p className="tnum text-[#c3d0cc]">
           Pasos que hace una persona:{' '}
           <span className="font-semibold text-white">{manualHoy}</span>
           <span className="mx-1.5 text-white/40">→</span>
           <span className={cn('font-semibold', vista === 'conIa' ? 'text-plano-claro' : 'text-white')}>{manualIa}</span>
         </p>
-        <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#8f9abd]">Ejemplo ilustrativo</p>
+        <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#8fa39e]">Ejemplo ilustrativo</p>
       </div>
 
       {/* Process picker */}
@@ -144,7 +144,7 @@ export function ProcessBlueprint({ className }: { className?: string }) {
             onClick={() => choose(i)}
             className={cn(
               'relative h-9 shrink-0 rounded-full px-3.5 text-[13px] font-medium transition-colors',
-              i === index ? 'bg-white/10 text-white' : 'text-[#8f9abd] hover:text-white',
+              i === index ? 'bg-white/10 text-white' : 'text-[#8fa39e] hover:text-white',
             )}
           >
             {p.nombre}
@@ -179,9 +179,9 @@ function Step({ paso, i, last, vista }: { paso: Paso; i: number; last: boolean; 
       <span
         className={cn(
           'relative z-10 flex size-[35px] shrink-0 items-center justify-center rounded-full border',
-          ia && 'border-plano-claro bg-plano-claro text-tinta shadow-[0_0_0_6px_rgb(174_191_255/0.12)]',
-          paso.actor === 'sistema' && 'border-plano-claro/50 bg-[#16255a] text-plano-claro',
-          persona && (vista === 'hoy' ? 'border-white/30 border-dashed bg-[#0e1a3d] text-white/80' : 'border-white bg-white text-tinta'),
+          ia && 'border-plano-claro bg-plano-claro text-tinta shadow-[0_0_0_6px_rgb(255_176_32/0.12)]',
+          paso.actor === 'sistema' && 'border-plano-claro/50 bg-[#153a3e] text-plano-claro',
+          persona && (vista === 'hoy' ? 'border-white/30 border-dashed bg-[#0e2a2e] text-white/80' : 'border-white bg-white text-tinta'),
         )}
       >
         <Icon className="size-4" aria-hidden />
@@ -192,13 +192,13 @@ function Step({ paso, i, last, vista }: { paso: Paso; i: number; last: boolean; 
           <span
             className={cn(
               'mt-0.5 shrink-0 rounded-full px-2 py-0.5 font-mono text-[10.5px] uppercase tracking-[0.06em]',
-              ia ? 'bg-plano-claro/15 text-plano-claro' : 'text-[#8f9abd]',
+              ia ? 'bg-plano-claro/15 text-plano-claro' : 'text-[#8fa39e]',
             )}
           >
             {label}
           </span>
         </div>
-        {paso.nota && <p className="mt-0.5 text-[13px] text-[#8f9abd]">{paso.nota}</p>}
+        {paso.nota && <p className="mt-0.5 text-[13px] text-[#8fa39e]">{paso.nota}</p>}
       </div>
     </li>
   );

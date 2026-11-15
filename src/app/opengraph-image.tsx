@@ -16,20 +16,20 @@ export default function OgImage() {
           justifyContent: 'space-between',
           padding: 72,
           color: '#fff',
-          background: '#0b1430',
+          background: '#08191c',
           backgroundImage:
-            'linear-gradient(rgba(174,191,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(174,191,255,0.08) 1px, transparent 1px)',
+            'linear-gradient(rgba(255,176,32,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,176,32,0.08) 1px, transparent 1px)',
           backgroundSize: '48px 48px',
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: 18, fontSize: 40, fontWeight: 800, letterSpacing: -1 }}>
-          <div style={{ width: 56, height: 56, borderRadius: 16, background: '#2347e8', display: 'flex' }} />
+          <div style={{ width: 56, height: 56, borderRadius: 16, background: '#ffb020', display: 'flex' }} />
           <span>Servis</span>
-          <span style={{ color: '#aebfff', marginLeft: -12 }}>Digital</span>
+          <span style={{ color: '#ffb020', marginLeft: -12 }}>Digital</span>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
           <div style={{ fontSize: 76, fontWeight: 800, lineHeight: 1.0, letterSpacing: -3, maxWidth: 950 }}>Ponemos la IA a trabajar dentro de tu empresa.</div>
-          <div style={{ fontSize: 30, color: '#c3cbe4' }}>Procesos · IA aplicada · Software a medida · Ecuador y España</div>
+          <div style={{ fontSize: 30, color: '#c3d0cc' }}>Procesos · IA aplicada · Software a medida · Ecuador y España</div>
         </div>
       </div>
     ),

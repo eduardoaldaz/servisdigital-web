@@ -55,7 +55,7 @@ export function Header() {
         </nav>
         <Link
           href="/contacto"
-          className="ml-auto hidden h-10 items-center rounded-full bg-plano-claro px-5 text-[15px] font-semibold text-tinta transition-colors hover:bg-[#c9d4ff] sm:inline-flex lg:ml-2"
+          className="ml-auto hidden h-10 items-center rounded-full bg-plano-claro px-5 text-[15px] font-semibold text-tinta transition-colors hover:bg-[#ffc94b] sm:inline-flex lg:ml-2"
         >
           Agenda una reunión
         </Link>

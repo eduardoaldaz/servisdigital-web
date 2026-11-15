@@ -1,31 +1,34 @@
 @import "tailwindcss";
 
 /*
- * Servis Digital: parent of FacServis (teal-black + amber) and DocusAI (violet).
- * Same family grammar (Figtree + Bricolage, two-tone wordmark, dark/light bands), own color: "azul plano",
- * the blue of a process blueprint. Committed strategy: navy bands carry the brand, cobalt is the one action color.
+ * Servis Digital: parent of FacServis (navy + steel blue) and DocusAI (violet).
+ * Same family grammar (Figtree + Bricolage, two-tone wordmark, dark/light bands), own palette:
+ * petrol ink + amber, the original FacServis web colors inherited by the parent brand.
+ * Committed strategy: petrol bands carry the brand, amber is the one action color.
+ * Token names: `plano` = amber as text/line on light bands (dark enough to read), `plano-claro` = amber fill.
  */
 :root {
-  --tinta: #0b1430;
-  --tinta-2: #111c42;
-  --tinta-3: #22306a;
-  --plano: #2347e8;
-  --plano-hover: #1a37c4;
-  --plano-claro: #aebfff;
-  --plano-suave: #eef1ff;
+  --tinta: #08191c;
+  --tinta-2: #0e2a2e;
+  --tinta-3: #153a3e;
+  --plano: #9a5a00;
+  --plano-hover: #7a4700;
+  --plano-claro: #ffb020;
+  --plano-suave: #fff3d6;
 
-  --papel: #f4f5f1;
-  --papel-2: #e4e6df;
+  --papel: #f3f6f2;
+  --papel-2: #e2e9e1;
   --superficie: #ffffff;
-  --texto: #0b1430;
-  --texto-2: #424b66;
-  --texto-3: #636c84;
+  --texto: #08191c;
+  --texto-2: #3a4b47;
+  --texto-3: #5b6d68;
 
   /* Family colors (shown only inside each product's own panel) */
-  --fs-tinta: #08191c;
-  --fs-tinta-2: #0e2a2e;
-  --fs-ambar: #ffb020;
-  --fs-papel: #f3f6f2;
+  --fs-tinta: #0c2f57;
+  --fs-tinta-2: #123d6e;
+  --fs-ambar: #8fbcf0; /* FacServis accent on dark: light steel blue */
+  --fs-azul: #185fa5;
+  --fs-papel: #e8f0fb;
   --da-from: #150e38;
   --da-to: #281a66;
   --da-brand: #5b3df5;
@@ -38,20 +41,20 @@
   --terciario: var(--texto-3);
   --linea: var(--papel-2);
   --acento: var(--plano);
-  --boton: var(--plano);
-  --boton-hover: var(--plano-hover);
-  --boton-texto: #fff;
+  --boton: var(--plano-claro);
+  --boton-hover: #ffc94b;
+  --boton-texto: var(--tinta);
 }
 
 .oscuro {
   --fondo: var(--tinta);
   --primer: #ffffff;
-  --secundario: #c3cbe4;
-  --terciario: #8f9abd;
+  --secundario: #c3d0cc;
+  --terciario: #8fa39e;
   --linea: rgb(255 255 255 / 0.11);
   --acento: var(--plano-claro);
   --boton: var(--plano-claro);
-  --boton-hover: #c9d4ff;
+  --boton-hover: #ffc94b;
   --boton-texto: var(--tinta);
 }
 
@@ -142,10 +145,10 @@ p {
 /* Blueprint paper: a fine measuring grid, only behind process diagrams. */
 .plano-grid {
   background-image:
-    linear-gradient(rgb(174 191 255 / 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(174 191 255 / 0.07) 1px, transparent 1px),
-    linear-gradient(rgb(174 191 255 / 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(174 191 255 / 0.035) 1px, transparent 1px);
+    linear-gradient(rgb(180 205 199 / 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(180 205 199 / 0.07) 1px, transparent 1px),
+    linear-gradient(rgb(180 205 199 / 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(180 205 199 / 0.035) 1px, transparent 1px);
   background-size:
     96px 96px,
     96px 96px,
@@ -258,5 +261,77 @@ p {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* AI demo: input is read (scan), then the result appears line by line. */
+@keyframes sd-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+    filter: blur(3px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+.sd-in {
+  animation: sd-in 520ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes sd-lectura {
+  0% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+.sd-lectura {
+  animation: sd-lectura 1200ms cubic-bezier(0.45, 0, 0.25, 1) 200ms both;
+}
+@keyframes sd-pulso {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(255 176 32 / 0);
+  }
+  40% {
+    box-shadow: 0 0 0 8px rgb(255 176 32 / 0.18);
+  }
+}
+.sd-pulso {
+  animation: sd-pulso 1400ms ease-out 300ms 1 both;
+}
+
+/* Method route: the line draws itself and each stop lights up in order. */
+.ruta-linea {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.ruta-vista .ruta-linea {
+  transform: none;
+}
+.ruta-paso {
+  opacity: 0.25;
+  transform: translateY(8px);
+  transition:
+    opacity 600ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.ruta-vista .ruta-paso {
+  opacity: 1;
+  transform: none;
+}
+@media (max-width: 767px) {
+  .ruta-linea {
+    transform: scaleY(0);
+    transform-origin: top;
   }
 }

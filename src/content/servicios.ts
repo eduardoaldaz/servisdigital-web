@@ -1,6 +1,8 @@
 export type Servicio = {
   slug: string;
   nombre: string;
+  /** A few words for the home list. */
+  corto: string;
   /** One line for lists and cards. */
   resumen: string;
   /** Headline of the service page. */
@@ -16,6 +18,7 @@ export const SERVICIOS: Servicio[] = [
   {
     slug: 'inteligencia-artificial',
     nombre: 'IA para empresas',
+    corto: 'Documentos, atención, datos y automatización.',
     resumen: 'Ponemos la IA a hacer el trabajo repetitivo: leer documentos, responder, clasificar, consultar tus datos.',
     titular: 'IA que trabaja dentro de tus procesos, no en una pestaña aparte.',
     intro:
@@ -39,6 +42,7 @@ export const SERVICIOS: Servicio[] = [
   {
     slug: 'procesos',
     nombre: 'Levantamiento y digitalización de procesos',
+    corto: 'Mapa del proceso y hoja de ruta.',
     resumen: 'Entendemos cómo se trabaja hoy, medimos dónde se pierde el tiempo y diseñamos el proceso digital.',
     titular: 'Antes de comprar software, entiende cómo trabaja tu empresa de verdad.',
     intro:
@@ -59,6 +63,7 @@ export const SERVICIOS: Servicio[] = [
   {
     slug: 'software-a-medida',
     nombre: 'Software a medida',
+    corto: 'Web, móvil y sistemas internos.',
     resumen: 'Aplicaciones web y móviles, portales y sistemas internos construidos para tu forma de trabajar.',
     titular: 'Software hecho para tu proceso, no tu proceso adaptado al software.',
     intro:
@@ -79,6 +84,7 @@ export const SERVICIOS: Servicio[] = [
   {
     slug: 'integraciones',
     nombre: 'Integraciones, ERP y facturación electrónica',
+    corto: 'ERP, SRI, Facturae, bancos y APIs.',
     resumen: 'Conectamos tus sistemas entre sí: ERP, facturación electrónica, bancos, tiendas online y hojas de cálculo.',
     titular: 'Que los datos pasen solos de un sistema a otro.',
     intro:

@@ -26,7 +26,7 @@ A current, AI-first company that builds and runs its own AI software products (F
 ## Operating Context
 
 - Markets: Ecuador and Spain. Spanish, neutral register (usted/tú neutral, avoid "vosotros").
-- Products in the family: **FacServis** (facservis.com, electronic invoicing SRI + inventory, purchases, receivables; teal-black + amber) and **DocusAI** (docusai.servisdigital.com, AI capture of supplier invoices for Spanish gestorías/SMEs; violet). DocusAI is pre-launch.
+- Products in the family: **FacServis** (facservis.com, electronic invoicing SRI + inventory, purchases, receivables; navy + steel blue, the colors of its app) and **DocusAI** (docusai.servisdigital.com, AI capture of supplier invoices for Spanish gestorías/SMEs; violet). DocusAI is pre-launch.
 - Family grammar shared with FacServis/DocusAI: Figtree + Bricolage Grotesque, two-tone wordmark, mono eyebrows, alternating dark/light sections.
 - Primary action: book a meeting (Cal.com/Calendly via `NEXT_PUBLIC_BOOKING_URL`), with a contact form as fallback and WhatsApp as alternative.
 
@@ -38,6 +38,8 @@ A current, AI-first company that builds and runs its own AI software products (F
 ## Brand Commitments
 
 - Name **Servis Digital**, domain servisdigital.com. Parent of FacServis and DocusAI; the three must look like one family, each with its own color.
+- Colors: Servis Digital uses petrol + amber (inherited from the first FacServis web); FacServis moves to the blue of its app; DocusAI stays violet. Decided by the user.
+- Little text: the user finds long copy goes unread. Show processes and animations; one short line per item.
 - Voice: direct, concrete, no hype, same tone as facservis.com ("No inventamos testimonios").
 
 ## Evidence on Hand
