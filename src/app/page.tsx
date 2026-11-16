@@ -5,6 +5,7 @@ import { AiDemo } from '@/components/ai-demo';
 import { Ruta } from '@/components/ruta';
 import { ProductPanels } from '@/components/productos';
 import { CtaBand, Pruebas } from '@/components/bloques';
+import { Fundador } from '@/components/fundador';
 import { ButtonLink, Container, H2, Section } from '@/components/ui';
 import { SERVICIOS } from '@/content/servicios';
 import { SECTORES } from '@/content/sectores';
@@ -134,6 +135,8 @@ export default function Home() {
           </ul>
         </Container>
       </Section>
+
+      <Fundador />
 
       <Pruebas />
 

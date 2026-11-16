@@ -6,6 +6,7 @@ export const SITE = {
   description:
     'Implementamos inteligencia artificial en empresas: levantamos tus procesos, los rediseñamos con IA y construimos el software a medida que los hace funcionar. Ecuador y España.',
   email: 'hola@servisdigital.com',
+  founder: { name: 'Eduardo Aldaz', url: 'https://eduardoaldaz.servisdigital.com' },
   countries: ['Ecuador', 'España'],
   bookingUrl: process.env.NEXT_PUBLIC_BOOKING_URL || null,
   whatsapp: {
