@@ -50,5 +50,14 @@ export function getCategorias(): string[] {
   return [...new Set(getPosts().map((p) => p.categoria))];
 }
 
+/** URL slug for a category: "IA en empresas" -> "ia-en-empresas". */
+export const slugCategoria = (c: string) =>
+  c
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+
 export const formatFecha = (iso: string) =>
   new Intl.DateTimeFormat('es', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(iso));

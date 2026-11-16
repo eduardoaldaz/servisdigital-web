@@ -5,6 +5,8 @@ export type Producto = {
   pais: string;
   url: string;
   urlLabel: string;
+  /** Button text when the product has no public site yet (url then points inside this site). */
+  cta?: string;
   estado: string;
   titular: string;
   texto: string;
@@ -31,8 +33,10 @@ export const PRODUCTOS: Producto[] = [
     nombre: 'DocusAI',
     wordmark: ['Docus', 'AI'],
     pais: 'España',
-    url: 'https://docusai.servisdigital.com',
-    urlLabel: 'docusai.servisdigital.com',
+    // Not deployed yet: requests go through a meeting. Switch to https://docusai.servisdigital.com when it is live.
+    url: '/contacto/',
+    urlLabel: 'acceso anticipado',
+    cta: 'Pide una demo',
     estado: 'Acceso anticipado',
     titular: 'Captura de facturas de proveedor con IA.',
     texto: 'Lee facturas en PDF, foto o correo, las valida con las reglas fiscales españolas y las exporta al programa contable o a Business Central.',

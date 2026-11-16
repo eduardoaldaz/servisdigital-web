@@ -1,4 +1,4 @@
-import { ArrowUpRight, Check, Sparkles } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Check, Sparkles } from 'lucide-react';
 import { PRODUCTOS, type Producto } from '@/content/productos';
 import { cn } from '@/lib/cn';
 import { DocusAIWordmark, FacServisWordmark } from './logo';
@@ -48,15 +48,14 @@ function ProductPanel({ p }: { p: Producto }) {
       <div className="mt-auto px-7 pb-7 pt-8 sm:px-9 sm:pb-9">
         <a
           href={p.url}
-          target="_blank"
-          rel="noopener"
+          {...(p.url.startsWith('http') ? { target: '_blank', rel: 'noopener' } : {})}
           className={cn(
             'inline-flex h-11 items-center gap-2 rounded-full px-5 text-[15px] font-semibold transition-colors',
             fs ? 'bg-[var(--fs-ambar)] text-[var(--fs-tinta)] hover:bg-[#80c8ff]' : 'bg-white text-[var(--da-from)] hover:bg-[#ece7ff]',
           )}
         >
-          Visitar {p.urlLabel}
-          <ArrowUpRight className="size-4" aria-hidden />
+          {p.cta ?? `Visitar ${p.urlLabel}`}
+          {p.cta ? <ArrowRight className="size-4" aria-hidden /> : <ArrowUpRight className="size-4" aria-hidden />}
         </a>
       </div>
     </article>

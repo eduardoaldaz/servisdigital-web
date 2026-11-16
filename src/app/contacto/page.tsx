@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import { Mail, MessageCircle } from 'lucide-react';
 import { PageHero } from '@/components/page-hero';
-import { ContactForm } from '@/components/contact-form';
-import { Container, Section } from '@/components/ui';
+import { ButtonLink, Container, Section } from '@/components/ui';
 import { SITE, whatsappLink } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -64,15 +63,20 @@ export default function ContactoPage() {
                 <iframe src={SITE.bookingUrl} title="Elige día y hora para la reunión" className="h-[720px] w-full" loading="lazy" />
               </div>
             ) : (
-              <ContactForm />
-            )}
-            {SITE.bookingUrl && (
-              <details className="mt-6">
-                <summary className="cursor-pointer text-[15px] font-semibold text-plano">¿Ningún horario te va bien? Déjanos un mensaje</summary>
-                <div className="mt-4">
-                  <ContactForm />
+              <div className="rounded-2xl bg-superficie p-8">
+                <h2 className="font-display text-[26px] font-bold tracking-[-0.02em] text-texto">Escríbenos y te proponemos horario.</h2>
+                <p className="mt-3 text-[16px] text-texto-2">Cuéntanos en dos líneas qué hace tu empresa y qué proceso quieres mejorar.</p>
+                <div className="mt-7 flex flex-wrap gap-3">
+                  {whatsapps.map(([pais, n]) => (
+                    <ButtonLink key={pais} href={whatsappLink(n!, 'Hola Servis Digital, quiero agendar una reunión')} external>
+                      WhatsApp {pais}
+                    </ButtonLink>
+                  ))}
+                  <ButtonLink href={`mailto:${SITE.email}?subject=${encodeURIComponent('Quiero agendar una reunión')}`} variant="secundario" external>
+                    {SITE.email}
+                  </ButtonLink>
                 </div>
-              </details>
+              </div>
             )}
           </div>
         </Container>

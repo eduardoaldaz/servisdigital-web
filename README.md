@@ -44,8 +44,15 @@ Aparece solo en `/blog`, en la portada (últimos 3), en el sitemap y en el RSS (
 
 ## Contacto y reuniones
 
-- `NEXT_PUBLIC_BOOKING_URL`: enlace de Cal.com o Calendly. Si existe, `/contacto` muestra la agenda y el formulario queda como alternativa.
-- `SMTP_URL`, `CONTACT_TO`: envío del formulario por email. Sin SMTP, las solicitudes se registran en el log del servidor.
+- `NEXT_PUBLIC_BOOKING_URL`: enlace de Cal.com. Si existe, `/contacto` muestra la agenda incrustada; si no, botones de WhatsApp y correo.
+- `NEXT_PUBLIC_WHATSAPP_EC` / `NEXT_PUBLIC_WHATSAPP_ES`: números de WhatsApp (solo dígitos con prefijo).
+
+## Publicación
+
+Sitio estático (`output: 'export'`) servido por GitHub Pages en https://servisdigital.com.
+Cada push a `main` lo publica con `.github/workflows/pages.yml`. Los valores públicos se configuran en
+GitHub → Settings → Secrets and variables → Actions → **Variables**: `BOOKING_URL`, `WHATSAPP_EC`, `WHATSAPP_ES`.
+El dominio está en `public/CNAME`; los DNS (Namecheap) apuntan a GitHub Pages.
 
 ## Diseño
 

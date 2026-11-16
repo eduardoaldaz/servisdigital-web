@@ -35,7 +35,7 @@ export function Footer() {
         <FooterCol title="Productos">
           {PRODUCTOS.map((p) => (
             <li key={p.id}>
-              <a href={p.url} target="_blank" rel="noopener" className="inline-flex flex-col gap-1 py-1">
+              <a href={p.url} {...(p.url.startsWith('http') ? { target: '_blank', rel: 'noopener' } : {})} className="inline-flex flex-col gap-1 py-1">
                 {p.id === 'facservis' ? <FacServisWordmark className="text-[18px]" /> : <DocusAIWordmark className="text-[18px]" />}
                 <span className="text-[13px] text-terciario">
                   {p.pais} · {p.urlLabel}
