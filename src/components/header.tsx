@@ -73,7 +73,9 @@ export function Header() {
       <div
         id="menu-movil"
         hidden={!open}
-        className="fixed inset-x-0 top-[72px] bottom-0 overflow-y-auto border-t border-white/10 bg-tinta px-5 pb-10 pt-4 lg:hidden"
+        // The header uses backdrop-blur, which makes it the containing block for fixed children:
+        // give the panel an explicit viewport height instead of bottom-0.
+        className="fixed inset-x-0 top-[72px] h-[calc(100dvh-72px)] overflow-y-auto border-t border-white/10 bg-tinta px-5 pb-10 pt-4 lg:hidden"
       >
         <nav aria-label="Principal móvil" className="flex flex-col">
           {[{ href: '/', label: 'Inicio' }, ...NAV, { href: '/contacto', label: 'Contacto' }].map((item) => (
