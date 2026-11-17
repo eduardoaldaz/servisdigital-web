@@ -60,7 +60,7 @@ export default function ContactoPage() {
           <div>
             {SITE.bookingUrl ? (
               <div className="overflow-hidden rounded-2xl bg-superficie">
-                <iframe src={SITE.bookingUrl} title="Elige día y hora para la reunión" className="h-[720px] w-full" loading="lazy" />
+                <iframe src={`${SITE.bookingUrl}${SITE.bookingUrl.includes('?') ? '&' : '?'}embed=true&theme=light`} title="Elige día y hora para la reunión" className="h-[720px] w-full" loading="lazy" />
               </div>
             ) : (
               <div className="rounded-2xl bg-superficie p-8">

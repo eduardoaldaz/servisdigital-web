@@ -9,21 +9,26 @@ export default function Privacidad() {
     <LegalPage titulo="Política de privacidad" slug="privacidad">
       <h2>Quién trata tus datos</h2>
       <p>
-        {SITE.name} es responsable de los datos que nos envías a través de este sitio. Puedes escribirnos a <a href={`mailto:${SITE.email}`}>{SITE.email}</a> para cualquier
+        {SITE.titular} ({SITE.name}) es responsable de los datos que nos envías a través de este sitio. Puedes escribirnos a <a href={`mailto:${SITE.email}`}>{SITE.email}</a> para cualquier
         cuestión sobre privacidad.
       </p>
       <h2>Qué datos recogemos y para qué</h2>
       <ul>
         <li>
-          <strong>Formulario de contacto y agenda:</strong> nombre, email, empresa, país y el mensaje que escribes. Los usamos solo para responderte y preparar la reunión.
+          <strong>Agenda de reuniones:</strong> al reservar, nombre, email y lo que escribas en la reserva. La agenda funciona con Cal.com (Cal.com, Inc.), que trata
+          esos datos por cuenta nuestra y puede hacerlo fuera de la Unión Europea. Los usamos solo para preparar y celebrar la reunión.
         </li>
         <li>
-          <strong>Navegación:</strong> este sitio no usa cookies de publicidad ni de seguimiento.
+          <strong>Correo y WhatsApp:</strong> los datos que incluyas en tu mensaje, solo para responderte.
+        </li>
+        <li>
+          <strong>Navegación:</strong> este sitio no usa cookies de publicidad ni de seguimiento. Se aloja en GitHub Pages (GitHub, Inc.), que registra la dirección IP
+          de las visitas por motivos de seguridad.
         </li>
       </ul>
       <h2>Base legal y conservación</h2>
       <p>
-        Tratamos los datos con tu consentimiento al enviar el formulario, conforme al Reglamento General de Protección de Datos (RGPD) en España y a la Ley Orgánica de
+        Tratamos los datos con tu consentimiento al reservar o escribirnos, conforme al Reglamento General de Protección de Datos (RGPD) en España y a la Ley Orgánica de
         Protección de Datos Personales (LOPDP) en Ecuador. Los conservamos mientras dure la relación comercial o hasta que pidas su eliminación.
       </p>
       <h2>Tus derechos</h2>

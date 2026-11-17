@@ -9,7 +9,8 @@ export default function AvisoLegal() {
     <LegalPage titulo="Aviso legal" slug="aviso-legal">
       <h2>Titular del sitio</h2>
       <p>
-        Este sitio web pertenece a {SITE.name}. Contacto: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
+        Este sitio web es de {SITE.titular}, que ofrece sus servicios con el nombre comercial {SITE.name}. Contacto:{' '}
+        <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
       </p>
       <h2>Contenido</h2>
       <p>

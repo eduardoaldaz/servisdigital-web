@@ -7,6 +7,8 @@ export const SITE = {
     'Implementamos inteligencia artificial en empresas: levantamos tus procesos, los rediseñamos con IA y construimos el software a medida que los hace funcionar. Ecuador y España.',
   email: 'hola@servisdigital.com',
   founder: { name: 'Eduardo Aldaz', url: 'https://eduardoaldaz.servisdigital.com' },
+  /** Legal holder shown in the legal pages. Add the NIF and address once the business is registered. */
+  titular: 'Eduardo Aldaz',
   countries: ['Ecuador', 'España'],
   bookingUrl: process.env.NEXT_PUBLIC_BOOKING_URL || null,
   whatsapp: {
