@@ -33,10 +33,8 @@ export const PRODUCTOS: Producto[] = [
     nombre: 'DocusAI',
     wordmark: ['Docus', 'AI'],
     pais: 'España',
-    // Not deployed yet: requests go through a meeting. Switch to https://docusai.servisdigital.com when it is live.
-    url: '/contacto/',
-    urlLabel: 'acceso anticipado',
-    cta: 'Pide una demo',
+    url: 'https://docusai.servisdigital.com',
+    urlLabel: 'docusai.servisdigital.com',
     estado: 'Acceso anticipado',
     titular: 'Captura de facturas de proveedor con IA.',
     texto: 'Lee facturas en PDF, foto o correo, las valida con las reglas fiscales españolas y las exporta al programa contable o a Business Central.',
