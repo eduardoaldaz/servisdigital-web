@@ -15,8 +15,8 @@ const AGENDA = ['Nos cuentas qué hace tu empresa y qué proceso te preocupa.', 
 export default function ContactoPage() {
   const whatsapps = (
     [
-      ['Ecuador', SITE.whatsapp.EC],
       ['España', SITE.whatsapp.ES],
+      ['Ecuador', SITE.whatsapp.EC],
     ] as const
   ).filter(([, n]) => n);
 

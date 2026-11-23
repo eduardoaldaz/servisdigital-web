@@ -25,7 +25,7 @@ A current, AI-first company that builds and runs its own AI software products (F
 
 ## Operating Context
 
-- Markets: Ecuador and Spain. Spanish, neutral register (usted/tú neutral, avoid "vosotros").
+- Markets: **Spain first** (decided 2026-11-24: the first clients are sought in Spain, so headlines, banners and the LinkedIn page say "pymes en España"). Ecuador stays visible only as FacServis's market and as proof of software in production, never in the headline. Spanish, neutral register (usted/tú neutral, avoid "vosotros").
 - Products in the family: **FacServis** (facservis.com, electronic invoicing SRI + inventory, purchases, receivables; navy + steel blue, the colors of its app) and **DocusAI** (docusai.servisdigital.com, AI capture of supplier invoices for Spanish gestorías/SMEs; violet). DocusAI is pre-launch.
 - Family grammar shared with FacServis/DocusAI: Figtree + Bricolage Grotesque, two-tone wordmark, mono eyebrows, alternating dark/light sections.
 - Primary action: book a meeting (Cal.com/Calendly via `NEXT_PUBLIC_BOOKING_URL`), with a contact form as fallback and WhatsApp as alternative.

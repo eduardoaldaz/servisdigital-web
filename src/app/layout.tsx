@@ -29,7 +29,7 @@ const jsonLd = {
   url: SITE.url,
   logo: `${SITE.url}/icon.svg`,
   email: SITE.email,
-  areaServed: ['EC', 'ES'],
+  areaServed: ['ES', 'EC'],
   description: SITE.description,
   brand: PRODUCTOS.map((p) => ({ '@type': 'Brand', name: p.nombre, url: p.url })),
 };

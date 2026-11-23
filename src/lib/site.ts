@@ -4,12 +4,13 @@ export const SITE = {
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://servisdigital.com').replace(/\/$/, ''),
   tagline: 'IA aplicada a tu empresa',
   description:
-    'Implementamos inteligencia artificial en empresas: levantamos tus procesos, los rediseñamos con IA y construimos el software a medida que los hace funcionar. Ecuador y España.',
+    'Implementamos inteligencia artificial en empresas: levantamos tus procesos, los rediseñamos con IA y construimos el software a medida que los hace funcionar. Para pymes en España.',
   email: 'hola@servisdigital.com',
   founder: { name: 'Eduardo Aldaz', url: 'https://eduardoaldaz.servisdigital.com' },
   /** Legal holder shown in the legal pages. Add the NIF and address once the business is registered. */
   titular: 'Eduardo Aldaz',
-  countries: ['Ecuador', 'España'],
+  /** Main market first. Ecuador stays as FacServis's market, not in the headline. */
+  countries: ['España'],
   bookingUrl: process.env.NEXT_PUBLIC_BOOKING_URL || null,
   whatsapp: {
     EC: process.env.NEXT_PUBLIC_WHATSAPP_EC || null,

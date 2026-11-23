@@ -26,7 +26,7 @@ export default function Home() {
             <h1 className="font-display text-[clamp(42px,6.2vw,80px)] font-extrabold leading-[0.98] tracking-[-0.038em]">
               Ponemos la IA <span className="text-plano-claro">a trabajar</span> dentro de tu empresa.
             </h1>
-            <p className="mt-7 max-w-[40ch] text-[20px] leading-relaxed text-secundario">Mapeamos tus procesos, los rediseñamos con IA y construimos el software. Ecuador y España.</p>
+            <p className="mt-7 max-w-[40ch] text-[20px] leading-relaxed text-secundario">Mapeamos tus procesos, los rediseñamos con IA y construimos el software. Para pymes en España.</p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <ButtonLink href="/contacto" size="lg">
                 Agenda una reunión

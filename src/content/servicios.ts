@@ -29,7 +29,7 @@ export const SERVICIOS: Servicio[] = [
       { titulo: 'Pregúntale a tus datos', texto: 'Consultas en lenguaje natural sobre ventas, stock o cartera, con respuestas que citan de dónde sale cada número.' },
       { titulo: 'Clasificar y enrutar', texto: 'Correos, tickets y solicitudes ordenados por tipo y urgencia, y asignados a quien corresponde.' },
       { titulo: 'Automatización con criterio', texto: 'Tareas que antes exigían leer y decidir: la IA propone, las reglas validan y una persona aprueba las excepciones.' },
-      { titulo: 'Gobierno y privacidad', texto: 'Proveedores de IA que no entrenan con tus datos, registro de lo que hace cada automatización y cumplimiento RGPD y LOPDP.' },
+      { titulo: 'Gobierno y privacidad', texto: 'Proveedores de IA que no entrenan con tus datos, registro de lo que hace cada automatización y cumplimiento del RGPD (y de la LOPDP en Ecuador).' },
     ],
     entregables: ['Mapa de casos de uso priorizados por impacto y esfuerzo', 'Piloto en un proceso real con métricas de antes y después', 'Integración con tus sistemas y documentación', 'Formación del equipo que lo va a usar'],
     ejemplos: ['Registrar facturas de proveedor sin teclearlas', 'Responder pedidos de WhatsApp consultando el stock real', 'Resumir y clasificar el correo de atención al cliente', 'Un asistente interno que responde con tus procedimientos'],
@@ -91,7 +91,7 @@ export const SERVICIOS: Servicio[] = [
       'Cada vez que alguien copia datos de una pantalla a otra se pierde tiempo y aparecen errores. Integramos tus sistemas para que la información se escriba una sola vez.',
     incluye: [
       { titulo: 'ERP', texto: 'Extensiones e integraciones para Microsoft Dynamics 365 Business Central y conexión con otros ERP mediante API o ficheros.' },
-      { titulo: 'Facturación electrónica', texto: 'Comprobantes del SRI en Ecuador (lo hacemos cada día en FacServis) y formatos españoles Facturae y UBL.' },
+      { titulo: 'Facturación electrónica', texto: 'Formatos españoles Facturae y UBL, y comprobantes del SRI en Ecuador, que emitimos cada día en FacServis.' },
       { titulo: 'APIs y automatizaciones', texto: 'Tiendas online, pasarelas de pago, bancos, CRM, correo y WhatsApp conectados con tu sistema central.' },
       { titulo: 'Migración de datos', texto: 'Del sistema antiguo al nuevo sin perder histórico: limpieza, validación y cuadre antes del cambio.' },
     ],
