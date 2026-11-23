@@ -20,7 +20,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: p.titulo,
     description: p.resumen,
     alternates: { canonical: `/blog/${p.slug}` },
-    openGraph: { type: 'article', title: p.titulo, description: p.resumen, publishedTime: p.fecha, authors: [p.autor] },
+    authors: [{ name: p.autor, url: p.autor === SITE.founder.name ? SITE.founder.url : SITE.url }],
+    // Next replaces (does not merge) the layout's openGraph, so the image has to be repeated here.
+    openGraph: {
+      type: 'article',
+      url: `/blog/${p.slug}/`,
+      siteName: SITE.name,
+      locale: 'es_ES',
+      title: p.titulo,
+      description: p.resumen,
+      publishedTime: p.fecha,
+      authors: [p.autor],
+      images: [{ url: '/og.png', width: 1200, height: 630 }],
+    },
+    twitter: { card: 'summary_large_image', title: p.titulo, description: p.resumen, images: ['/og.png'] },
   };
 }
 
@@ -37,9 +50,15 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
     headline: post.titulo,
     description: post.resumen,
     datePublished: post.fecha,
-    author: { '@type': 'Organization', name: post.autor },
-    publisher: { '@type': 'Organization', name: SITE.name, url: SITE.url },
-    mainEntityOfPage: `${SITE.url}/blog/${post.slug}`,
+    dateModified: post.fecha,
+    inLanguage: 'es',
+    image: `${SITE.url}/og.png`,
+    author:
+      post.autor === SITE.founder.name
+        ? { '@type': 'Person', name: post.autor, url: SITE.founder.url, jobTitle: 'Fundador de Servis Digital' }
+        : { '@type': 'Organization', name: post.autor, url: SITE.url },
+    publisher: { '@type': 'Organization', name: SITE.name, url: SITE.url, logo: { '@type': 'ImageObject', url: `${SITE.url}/icon.svg` } },
+    mainEntityOfPage: `${SITE.url}/blog/${post.slug}/`,
   };
 
   return (

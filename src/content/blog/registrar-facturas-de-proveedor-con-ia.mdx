@@ -1,0 +1,51 @@
+---
+titulo: "Registrar facturas de proveedor con IA: cómo funciona y qué revisar"
+resumen: Leer una factura y teclearla en el programa contable es el ejemplo perfecto de trabajo que la IA ya hace bien. Qué se automatiza, qué se valida y dónde sigue haciendo falta una persona.
+fecha: 2026-11-30
+categoria: IA en empresas
+autor: Eduardo Aldaz
+---
+
+Cada factura de proveedor que entra en una empresa o en una gestoría sigue el mismo camino: alguien la abre, lee el proveedor, la fecha, las bases, los tipos de IVA, las retenciones, y lo teclea en el programa contable. Con decenas o cientos de facturas al mes, son horas de trabajo que no requieren criterio, solo atención.
+
+Es uno de los procesos donde la IA aporta más y antes, porque cumple las cuatro condiciones de un buen primer proyecto: **se repite mucho, la entrada es desordenada, el resultado se puede comprobar y un error se detecta antes de causar daño**. Lo explicamos en [por dónde empezar con la IA en tu empresa](/blog/por-donde-empezar-con-ia-en-tu-empresa).
+
+## Por qué el OCR de siempre no bastaba
+
+Los programas de reconocimiento de texto llevan años en el mercado. El problema era que necesitaban una plantilla por proveedor: dónde está el número de factura, dónde el total. Cada proveedor nuevo o cada cambio de diseño rompía la plantilla.
+
+Los modelos de IA actuales **entienden la factura como la entendería una persona**: saben qué es una base imponible aunque esté en otra posición, con otro nombre o en una foto torcida. No necesitan plantillas.
+
+## Qué hace el sistema, paso a paso
+
+1. **Recoge la factura** desde donde llega: un buzón de correo, una carpeta compartida o una foto desde el móvil.
+2. **Extrae los datos**: emisor y su identificación fiscal, número, fecha, bases por tipo de impuesto, cuotas, retenciones, total y, si hace falta, las líneas.
+3. **Valida con reglas**, que es la parte importante. La IA lee, pero las reglas comprueban:
+   - que cada base multiplicada por su tipo coincida con la cuota,
+   - que la suma cuadre con el total,
+   - que la identificación fiscal tenga un formato válido,
+   - que la factura no esté ya registrada (duplicados),
+   - que el proveedor exista en tu contabilidad, o proponer darlo de alta.
+4. **Separa lo correcto de lo dudoso.** Las facturas que pasan todas las reglas quedan listas para exportar; las que no, se marcan con el motivo para que una persona las revise.
+5. **Exporta al programa contable o al ERP**, con la cuenta de gasto propuesta según el histórico de ese proveedor.
+
+## Dónde sigue haciendo falta una persona
+
+- **Las facturas que no cuadran.** A veces el error es del proveedor, y eso hay que reclamarlo.
+- **Los casos fiscales especiales**: inversión del sujeto pasivo, operaciones intracomunitarias, regímenes especiales. El sistema los detecta y avisa; la decisión es de quien lleva la contabilidad.
+- **La primera vez de cada proveedor**, para confirmar a qué cuenta va su gasto.
+
+El objetivo no es que nadie mire las facturas, sino que **solo se miren las que lo necesitan**.
+
+## Qué preguntar antes de elegir una herramienta
+
+- ¿Valida las reglas fiscales de tu país o solo extrae texto?
+- ¿Exporta directamente a tu programa contable, o tendrás que copiar los datos otra vez?
+- ¿Dónde se procesan las facturas y se usan para entrenar modelos? Lo detallamos en [IA y protección de datos](/blog/ia-y-proteccion-de-datos).
+- ¿Puedes ver qué ha leído la IA al lado del documento original, para revisar rápido?
+
+## Nuestra experiencia
+
+Este es justo el problema que resuelve [DocusAI](https://docusai.servisdigital.com), nuestro producto para gestorías y pymes en España: lee facturas en PDF, foto o correo, las valida con las reglas fiscales españolas y las exporta al programa contable o a Business Central.
+
+Si tu caso no encaja en un producto estándar (otro país, otro ERP, documentos distintos como albaranes o guías de remisión), lo construimos a medida. Hablemos en una [reunión de 30 minutos](/contacto) o mira cómo trabajamos las [integraciones con ERP](/servicios/integraciones).

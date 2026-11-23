@@ -27,18 +27,26 @@ function read(file: string): Post {
     resumen: String(data.resumen),
     fecha: new Date(data.fecha).toISOString().slice(0, 10),
     categoria: String(data.categoria ?? 'General'),
-    autor: String(data.autor ?? 'Equipo Servis Digital'),
+    autor: String(data.autor ?? 'Eduardo Aldaz'),
     minutos: Math.max(1, Math.round(words / 220)),
     contenido: content,
   };
 }
 
+/**
+ * Published posts, newest first. A post dated in the future stays hidden until its day
+ * (the Pages workflow rebuilds every morning), so articles can be written ahead and drip out.
+ * `next dev` shows them all, to preview drafts.
+ */
 export function getPosts(): Post[] {
   if (!fs.existsSync(DIR)) return [];
+  const hoy = new Date().toISOString().slice(0, 10);
+  const verTodos = process.env.NODE_ENV === 'development';
   return fs
     .readdirSync(DIR)
     .filter((f) => /\.mdx?$/.test(f))
     .map(read)
+    .filter((p) => verTodos || p.fecha <= hoy)
     .sort((a, b) => b.fecha.localeCompare(a.fecha));
 }
 
