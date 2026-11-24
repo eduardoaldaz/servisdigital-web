@@ -11,6 +11,8 @@ export const SITE = {
   titular: 'Eduardo Aldaz',
   /** Main market first. Ecuador stays as FacServis's market, not in the headline. */
   countries: ['España'],
+  /** Cloudflare Web Analytics (cookieless, no consent banner needed). Public beacon token. */
+  cfAnalyticsToken: process.env.NEXT_PUBLIC_CF_ANALYTICS_TOKEN || 'b6e3231c74ee4d36bdb3c27278800e5f',
   bookingUrl: process.env.NEXT_PUBLIC_BOOKING_URL || null,
   whatsapp: {
     EC: process.env.NEXT_PUBLIC_WHATSAPP_EC || null,

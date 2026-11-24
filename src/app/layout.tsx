@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import Script from 'next/script';
 import { Bricolage_Grotesque, Figtree, JetBrains_Mono } from 'next/font/google';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
@@ -53,6 +54,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main id="contenido">{children}</main>
         <Footer />
+        {process.env.NODE_ENV === 'production' && SITE.cfAnalyticsToken && (
+          <Script
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            strategy="afterInteractive"
+            data-cf-beacon={JSON.stringify({ token: SITE.cfAnalyticsToken })}
+          />
+        )}
       </body>
     </html>
   );

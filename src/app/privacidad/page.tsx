@@ -25,6 +25,14 @@ export default function Privacidad() {
           <strong>Navegación:</strong> este sitio no usa cookies de publicidad ni de seguimiento. Se aloja en GitHub Pages (GitHub, Inc.), que registra la dirección IP
           de las visitas por motivos de seguridad.
         </li>
+        <li>
+          <strong>Estadísticas de visitas:</strong> usamos Cloudflare Web Analytics (Cloudflare, Inc.) para contar visitas de forma agregada: páginas vistas, país y
+          sitio de procedencia. No usa cookies, no guarda datos en tu navegador y no identifica a visitantes individuales.
+        </li>
+        <li>
+          <strong>Calculadora:</strong> los datos que escribes en la calculadora se procesan solo en tu navegador y no nos llegan, salvo que decidas enviárnoslos por
+          correo.
+        </li>
       </ul>
       <h2>Base legal y conservación</h2>
       <p>
