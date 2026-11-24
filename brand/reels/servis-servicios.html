@@ -1,0 +1,123 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Figtree:wght@500;600;700&family=JetBrains+Mono:wght@500&display=block');
+*{margin:0;box-sizing:border-box}
+body{width:1080px;height:1920px;overflow:hidden;background:#08191c;color:#fff;font-family:Figtree,sans-serif;position:relative}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:60px 60px}
+.glow{position:absolute;width:1200px;height:1200px;right:-520px;top:-320px;background:radial-gradient(circle,rgba(255,176,32,.18),transparent 60%)}
+.bar{position:absolute;left:90px;right:90px;top:150px;height:8px;border-radius:8px;background:rgba(255,255,255,.12)}
+.bar i{display:block;height:100%;width:0;border-radius:8px;background:#ffb020}
+.brand{position:absolute;left:90px;top:186px;display:flex;align-items:center;gap:18px;font-family:'Bricolage Grotesque';font-weight:800;font-size:44px;letter-spacing:-.03em}
+.brand svg{width:56px;height:56px}
+.s{position:absolute;left:90px;right:120px;top:300px;bottom:440px;display:flex;flex-direction:column;justify-content:center}
+.d{font-family:'Bricolage Grotesque';font-weight:800;letter-spacing:-.04em;line-height:1}
+.a{color:#ffb020}
+.m{font-family:'JetBrains Mono';font-weight:500;letter-spacing:.1em;text-transform:uppercase;font-size:30px;color:#8fa39e;margin-bottom:34px}
+h1{font-size:128px}h2{font-size:100px}
+.l{font-size:48px;line-height:1.35;color:#c3d0cc;margin-top:44px}
+.list{display:flex;flex-direction:column;gap:30px;margin-top:56px}
+.li{display:flex;gap:28px;align-items:center;font-size:46px;font-weight:600}
+.k{flex:none;width:72px;height:72px;border-radius:50%;background:#ffb020;color:#08191c;display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:800}
+.card{margin-top:60px;background:#f3f6f2;color:#08191c;border-radius:36px;padding:44px 48px;box-shadow:0 30px 80px rgba(0,0,0,.4)}
+.row{display:flex;justify-content:space-between;align-items:center;font-size:42px;font-weight:600;padding:22px 0;border-bottom:2px solid #dde3df}
+.row:last-child{border:0}
+.tag{font-family:'JetBrains Mono';font-size:30px;padding:10px 18px;border-radius:12px;background:#fff1d6;color:#9a5a00}
+.ok{color:#0f8a4b}
+.bubble{max-width:780px;font-size:42px;line-height:1.3;padding:30px 38px;border-radius:34px;margin-top:26px}
+.in{background:#1d3236;border-bottom-left-radius:10px}
+.outb{background:#ffb020;color:#08191c;margin-left:auto;border-bottom-right-radius:10px;font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:22px;margin-top:60px}
+.chip{padding:22px 34px;border-radius:999px;background:rgba(255,176,32,.14);border:2px solid rgba(255,176,32,.45);font-size:42px;font-weight:700}
+.steps{display:flex;flex-direction:column;gap:0;margin-top:60px}
+.step{display:flex;gap:30px;align-items:center;padding:28px 0;border-top:2px solid rgba(255,255,255,.12);font-size:46px;font-weight:600}
+.step b{font-family:'JetBrains Mono';font-weight:500;color:#ffb020;font-size:34px;width:70px}
+.mk{width:280px;height:280px}
+.cta{margin-top:56px;display:inline-block;padding:30px 48px;border-radius:999px;background:#ffb020;color:#08191c;font-size:46px;font-weight:800}
+</style></head><body>
+<div class="grid"></div><div class="glow"></div>
+<div class="bar"><i></i></div>
+<div class="brand"><svg viewBox="0 0 24 24"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffc94b"/><stop offset="1" stop-color="#f59e0b"/></linearGradient></defs><rect x="1" y="1" width="22" height="22" rx="6.5" fill="url(#g)"/><path d="M16.6 7.2H10a2.4 2.4 0 0 0 0 4.8h4a2.4 2.4 0 0 1 0 4.8H7.4" fill="none" stroke="#08191c" stroke-width="2" stroke-linecap="round"/><circle cx="16.8" cy="7.2" r="1.7" fill="#08191c"/><circle cx="7.2" cy="16.8" r="1.7" fill="#08191c"/></svg><span>Servis<span class="a">Digital</span></span></div>
+
+<section class="s" data-start="0" data-end="3.4">
+  <div class="m" data-in="0">Para pymes en España</div>
+  <h1 class="d" data-in="0.15">¿Tu equipo pasa horas <span class="a">copiando datos?</span></h1>
+  <p class="l" data-in="1.0">Facturas, pedidos, correos, hojas de Excel… Hay una forma mejor →</p>
+</section>
+
+<section class="s" data-start="3.4" data-end="6.6">
+  <h1 class="d" data-in="0">Ponemos la IA <span class="a">a trabajar</span> dentro de tu empresa.</h1>
+  <p class="l" data-in="0.9">Así lo hacemos, en 4 servicios.</p>
+</section>
+
+<section class="s" data-start="6.6" data-end="10.2">
+  <div class="m" data-in="0">01 · Procesos</div>
+  <h2 class="d" data-in="0.1">Primero medimos <span class="a">dónde se pierde el tiempo.</span></h2>
+  <div class="list">
+    <div class="li" data-in="0.8" data-fx="left"><span class="k">1</span>Hablamos con quien hace el trabajo</div>
+    <div class="li" data-in="1.1" data-fx="left"><span class="k">2</span>Mapeamos el proceso real</div>
+    <div class="li" data-in="1.4" data-fx="left"><span class="k">3</span>Hoja de ruta con prioridades</div>
+  </div>
+</section>
+
+<section class="s" data-start="10.2" data-end="13.8">
+  <div class="m" data-in="0">02 · IA · Documentos</div>
+  <h2 class="d" data-in="0.1">La IA lee tus <span class="a">facturas y pedidos.</span></h2>
+  <div class="card" data-in="0.6">
+    <div class="row"><span>factura_proveedor.pdf</span><span class="tag" data-in="0.8" data-fx="fade">Leída</span></div>
+    <div class="row" data-in="1.2" data-fx="fade"><span>Importes cuadran</span><span class="ok">✓</span></div>
+    <div class="row" data-in="1.5" data-fx="fade"><span>NIF válido · sin duplicados</span><span class="ok">✓</span></div>
+    <div class="row" data-in="1.8" data-fx="fade"><span>Lista para tu ERP</span><span class="ok">✓</span></div>
+  </div>
+</section>
+
+<section class="s" data-start="13.8" data-end="17.6">
+  <div class="m" data-in="0">02 · IA · Asistentes</div>
+  <h2 class="d" data-in="0.1">Responde a tus clientes <span class="a">con tu información.</span></h2>
+  <div class="bubble in" data-in="0.7" data-fx="left">¿Cuándo llega mi pedido?</div>
+  <div class="bubble outb" data-in="1.3" data-fx="pop">Tu pedido salió hoy. Llega el jueves.</div>
+  <p class="l" data-in="2.0">Por WhatsApp, web o correo. Y si no sabe, lo pasa a una persona.</p>
+</section>
+
+<section class="s" data-start="17.6" data-end="21">
+  <div class="m" data-in="0">03 · Software a medida</div>
+  <h2 class="d" data-in="0.1">Herramientas hechas <span class="a">para tu forma de trabajar.</span></h2>
+  <div class="chips">
+    <span class="chip" data-in="0.7" data-fx="pop">Apps web</span>
+    <span class="chip" data-in="0.9" data-fx="pop">Apps móviles</span>
+    <span class="chip" data-in="1.1" data-fx="pop">Portales de clientes</span>
+    <span class="chip" data-in="1.3" data-fx="pop">Paneles de gestión</span>
+  </div>
+</section>
+
+<section class="s" data-start="21" data-end="24.4">
+  <div class="m" data-in="0">04 · Integraciones</div>
+  <h2 class="d" data-in="0.1">Tus sistemas, <span class="a">hablando entre sí.</span></h2>
+  <div class="chips">
+    <span class="chip" data-in="0.7" data-fx="pop">Business Central</span>
+    <span class="chip" data-in="0.9" data-fx="pop">Facturae · UBL</span>
+    <span class="chip" data-in="1.1" data-fx="pop">Bancos</span>
+    <span class="chip" data-in="1.3" data-fx="pop">Tiendas online</span>
+    <span class="chip" data-in="1.5" data-fx="pop">WhatsApp</span>
+  </div>
+  <p class="l" data-in="1.9">Sin volver a teclear lo mismo dos veces.</p>
+</section>
+
+<section class="s" data-start="24.4" data-end="28">
+  <div class="m" data-in="0">Cómo trabajamos</div>
+  <h2 class="d" data-in="0.1">Sin humo. <span class="a">Con resultados.</span></h2>
+  <div class="steps">
+    <div class="step" data-in="0.7" data-fx="left"><b>01</b>Empezamos por un proceso concreto</div>
+    <div class="step" data-in="1.0" data-fx="left"><b>02</b>Piloto medible en pocas semanas</div>
+    <div class="step" data-in="1.3" data-fx="left"><b>03</b>Una persona revisa lo que hace la IA</div>
+    <div class="step" data-in="1.6" data-fx="left"><b>04</b>Tus datos protegidos, con RGPD</div>
+  </div>
+</section>
+
+<section class="s" data-start="28" data-end="32.5">
+  <svg class="mk" data-in="0" data-fx="pop" viewBox="0 0 24 24"><defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffc94b"/><stop offset="1" stop-color="#f59e0b"/></linearGradient></defs><rect x="1" y="1" width="22" height="22" rx="6.5" fill="url(#g2)"/><path d="M16.6 7.2H10a2.4 2.4 0 0 0 0 4.8h4a2.4 2.4 0 0 1 0 4.8H7.4" fill="none" stroke="#08191c" stroke-width="2" stroke-linecap="round"/><circle cx="16.8" cy="7.2" r="1.7" fill="#08191c"/><circle cx="7.2" cy="16.8" r="1.7" fill="#08191c"/></svg>
+  <h1 class="d" data-in="0.4" style="margin-top:56px">Ponemos la IA <span class="a">a trabajar.</span></h1>
+  <p class="l" data-in="0.9">Cuéntanos qué tarea te quita más horas. En 30 minutos te decimos si tiene solución.</p>
+  <span class="cta" data-in="1.4" data-fx="pop">Reserva en servisdigital.com</span>
+</section>
+
+<script src="engine.js"></script>
+</body></html>
