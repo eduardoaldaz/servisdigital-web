@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Figtree:wght@500;600;700&family=JetBrains+Mono:wght@500&display=block');
+*{margin:0;box-sizing:border-box}
+body{width:1080px;height:1920px;overflow:hidden;background:#0C2F57;color:#F3F6F2;font-family:Figtree,sans-serif;position:relative}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:60px 60px}
+.glow{position:absolute;width:1200px;height:1200px;right:-500px;top:-300px;background:radial-gradient(circle,rgba(77,178,255,.22),transparent 60%)}
+.bar{position:absolute;left:90px;right:90px;top:150px;height:8px;border-radius:8px;background:rgba(255,255,255,.12)}
+.bar i{display:block;height:100%;width:0;border-radius:8px;background:#4DB2FF}
+.brand{position:absolute;left:90px;top:190px;font-family:'Bricolage Grotesque';font-weight:800;font-size:44px;letter-spacing:-.03em}
+.s{position:absolute;left:90px;right:120px;top:300px;bottom:440px;display:flex;flex-direction:column;justify-content:center}
+.d{font-family:'Bricolage Grotesque';font-weight:800;letter-spacing:-.04em;line-height:1}
+.a{color:#4DB2FF}
+.m{font-family:'JetBrains Mono';font-weight:500;letter-spacing:.1em;text-transform:uppercase;font-size:30px;color:#9fc3e6;margin-bottom:34px}
+h1{font-size:132px}h2{font-size:104px}
+.l{font-size:48px;line-height:1.35;color:#c9dbef;margin-top:44px}
+.chips{display:flex;flex-wrap:wrap;gap:22px;margin-top:60px}
+.chip{padding:22px 34px;border-radius:999px;background:rgba(77,178,255,.16);border:2px solid rgba(77,178,255,.45);font-size:42px;font-weight:700}
+.card{margin-top:60px;background:#F3F6F2;color:#0C2F57;border-radius:36px;padding:44px 48px;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.row{display:flex;justify-content:space-between;align-items:center;font-size:42px;font-weight:600;padding:22px 0;border-bottom:2px solid #dbe5f1}
+.row:last-child{border:0}
+.tag{font-family:'JetBrains Mono';font-size:30px;padding:10px 18px;border-radius:12px;background:#E8F0FB;color:#185FA5}
+.ok{color:#0f8a4b}.warn{color:#c2410c}
+.big{font-family:'JetBrains Mono';font-size:96px;font-weight:500;letter-spacing:.02em}
+.list{display:flex;flex-direction:column;gap:30px;margin-top:56px}
+.li{display:flex;gap:28px;align-items:center;font-size:48px;font-weight:600}
+.k{flex:none;width:72px;height:72px;border-radius:50%;background:#4DB2FF;color:#0C2F57;display:flex;align-items:center;justify-content:center;font-size:38px;font-weight:800}
+.logo{display:flex;flex-direction:column;align-items:flex-start}
+.mark{width:300px;height:300px;border-radius:64px;background:#0a2647;border:3px solid rgba(77,178,255,.5);display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque';font-weight:800;font-size:170px;letter-spacing:-8px}
+.cta{margin-top:56px;display:inline-block;padding:30px 48px;border-radius:999px;background:#4DB2FF;color:#0C2F57;font-size:48px;font-weight:800}
+.huge{font-size:190px}
+.num{font-family:'Bricolage Grotesque';font-weight:800;font-size:260px;letter-spacing:-.05em;line-height:.9;color:#4DB2FF}
+.strike{position:relative;color:#9fc3e6}
+.center{align-items:flex-start}

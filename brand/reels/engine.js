@@ -40,6 +40,11 @@
           st.opacity = local >= it.at ? 1 : 0;
           continue;
         }
+        if (it.fx === 'count') {
+          it.n.textContent = Math.round(p * +it.n.dataset.to) + (it.n.dataset.suffix || '');
+          st.opacity = local >= it.at ? 1 : 0;
+          continue;
+        }
         st.opacity = p;
         if (it.fx === 'up') st.transform = `translateY(${(60 * (1 - p)).toFixed(2)}px)`;
         else if (it.fx === 'left') st.transform = `translateX(${(-80 * (1 - p)).toFixed(2)}px)`;
