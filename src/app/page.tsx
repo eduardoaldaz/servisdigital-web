@@ -45,6 +45,18 @@ export default function Home() {
         <Container>
           <H2 id="demo">Así trabaja la IA en tu empresa.</H2>
           <AiDemo className="mt-10" />
+          <Link
+            href="/calculadora"
+            className="group mt-10 flex flex-col gap-4 rounded-2xl bg-plano-suave p-6 sm:flex-row sm:items-center sm:justify-between sm:p-7"
+          >
+            <span>
+              <span className="block font-display text-[22px] font-bold leading-tight tracking-[-0.02em] text-tinta">¿Cuántas horas pierde tu equipo copiando datos?</span>
+              <span className="mt-1.5 block text-[15px] text-texto-2">Calcúlalo en dos minutos, con tus propias tareas. Gratis y sin registrarte.</span>
+            </span>
+            <span className="inline-flex shrink-0 items-center gap-2 text-[16px] font-semibold text-plano group-hover:text-plano-hover">
+              Abrir la calculadora <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
+            </span>
+          </Link>
         </Container>
       </Section>
 

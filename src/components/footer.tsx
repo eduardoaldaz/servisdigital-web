@@ -30,6 +30,7 @@ export function Footer() {
               {n.label}
             </FooterLink>
           ))}
+          <FooterLink href="/calculadora">Calculadora</FooterLink>
           <FooterLink href="/contacto">Contacto</FooterLink>
         </FooterCol>
         <FooterCol title="Productos">
