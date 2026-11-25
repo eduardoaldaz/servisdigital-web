@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Figtree:wght@500;600;700&family=JetBrains+Mono:wght@500&display=block');
+*{margin:0;box-sizing:border-box}
+body{width:1080px;height:1350px;overflow:hidden;background:#0C2F57;color:#F3F6F2;font-family:Figtree,sans-serif;position:relative}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:54px 54px}
+.p{position:absolute;inset:0;padding:96px 88px;display:flex;flex-direction:column}
+.c{margin:auto 0;padding-bottom:40px}
+.light{background:#E8F0FB;color:#0C2F57}.light .grid{display:none}
+.d{font-family:'Bricolage Grotesque';font-weight:800;letter-spacing:-.035em;line-height:1.02}
+.a{color:#4DB2FF}.light .a{color:#185FA5}
+.m{font-family:'JetBrains Mono';font-weight:500;letter-spacing:.08em;text-transform:uppercase;font-size:26px;color:#9fc3e6}.light .m{color:#185FA5}
+h1{font-size:108px}h2{font-size:82px}
+p.l{font-size:41px;line-height:1.35;color:#c9dbef}.light p.l{color:#2c4a6b}
+ul,ol{list-style:none;display:flex;flex-direction:column;gap:30px;margin-top:56px}
+li{display:flex;gap:28px;font-size:41px;line-height:1.3;align-items:flex-start}
+.k{flex:none;width:62px;height:62px;border-radius:50%;border:3px solid #4DB2FF;color:#4DB2FF;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:700}
+.light .k{border-color:#185FA5;color:#185FA5}
+.foot{display:flex;align-items:center;gap:18px;font-family:'Bricolage Grotesque';font-weight:800;font-size:40px;letter-spacing:-.03em}
+.foot .n{margin-left:auto;font-family:'JetBrains Mono';font-weight:500;font-size:26px;letter-spacing:0;color:#9fc3e6}
+.light .foot .n{color:#185FA5}
+.chip{display:inline-block;padding:14px 26px;border-radius:999px;background:rgba(77,178,255,.15);color:#4DB2FF;font-size:34px;font-weight:700;margin:0 14px 14px 0}
+.q{font-family:'Bricolage Grotesque';font-weight:800;font-size:64px;line-height:1.12;letter-spacing:-.03em}
