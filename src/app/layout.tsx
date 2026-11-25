@@ -3,7 +3,7 @@ import Script from 'next/script';
 import { Bricolage_Grotesque, Figtree, JetBrains_Mono } from 'next/font/google';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { SITE } from '@/lib/site';
+import { SITE, SOCIAL } from '@/lib/site';
 import { PRODUCTOS } from '@/content/productos';
 import './globals.css';
 
@@ -33,6 +33,7 @@ const jsonLd = {
   areaServed: ['ES', 'EC'],
   description: SITE.description,
   brand: PRODUCTOS.map((p) => ({ '@type': 'Brand', name: p.nombre, url: p.url })),
+  sameAs: SOCIAL.map((s) => s.url),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -3,6 +3,7 @@ import { NAV, SITE } from '@/lib/site';
 import { SERVICIOS } from '@/content/servicios';
 import { PRODUCTOS } from '@/content/productos';
 import { Container } from './ui';
+import { SocialIcons } from './social-icons';
 import { DocusAIWordmark, FacServisWordmark, Logo } from './logo';
 
 export function Footer() {
@@ -16,6 +17,7 @@ export function Footer() {
           <a href={`mailto:${SITE.email}`} className="mt-1 inline-block text-[14px] text-secundario hover:text-white">
             {SITE.email}
           </a>
+          <SocialIcons className="mt-6" />
         </div>
         <FooterCol title="Servicios">
           {SERVICIOS.map((s) => (

@@ -20,6 +20,13 @@ export const SITE = {
   },
 };
 
+/** Official social profiles (footer icons and schema.org sameAs). */
+export const SOCIAL = [
+  { id: 'linkedin', label: 'LinkedIn', url: 'https://www.linkedin.com/company/servisdigital/' },
+  { id: 'instagram', label: 'Instagram', url: 'https://www.instagram.com/servisdigital.es/' },
+  { id: 'facebook', label: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61596767165466' },
+] as const;
+
 export const NAV = [
   { href: '/servicios', label: 'Servicios' },
   { href: '/sectores', label: 'Sectores' },
